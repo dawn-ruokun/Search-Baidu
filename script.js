@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         "联系我们"
     ];
     
-    // 修改4: 添加百度搜索建议API调用(可选)
+    // 添加百度搜索建议API调用(可选)
     function fetchBaiduSuggestions(query) {
         if (query.length === 0) return Promise.resolve([]);
         
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         suggestionsContainer.innerHTML = '';
         
         if (inputValue.length > 0) {
-            // 修改5: 可以同时使用本地建议和百度建议
+            // 同时使用本地建议和百度建议
             const localFiltered = sampleSuggestions.filter(item => 
                 item.toLowerCase().includes(inputValue)
             );
