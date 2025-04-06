@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的网站 - 搜索</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="search-container">
+            <!-- 修改1: 将action改为百度搜索URL -->
+            <form id="search-form" class="search-box" action="https://www.baidu.com/s" method="get" target="_blank">
+                <!-- 修改2: 百度使用wd作为查询参数名 -->
+                <input type="text" name="wd" placeholder="搜索网站内容..." class="search-input" autocomplete="off">
+                <button type="submit" class="search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+                <!-- 修改3: 添加百度站点限制(可选) -->
+                <input type="hidden" name="si" value="yourdomain.com"> <!-- 替换yourdomain.com为你的域名 -->
+            </form>
+            <div class="search-suggestions" id="suggestions"></div>
+        </div>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
